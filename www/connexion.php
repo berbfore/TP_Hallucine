@@ -8,7 +8,8 @@
     //mysql:host=localhost;dbname=hallucine", "root", "root"
     $sql = "SELECT * FROM `movies`;";
     $results = $database->query($sql);
-    while ($row = $results->fetch()) {
+    var_dump($results->fetch(PDO::FETCH_ASSOC));
+    while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
         echo $row["title"] . " " . $row["release_date"] . "<br>";
     }
 
