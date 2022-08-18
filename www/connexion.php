@@ -25,6 +25,7 @@
 
    $request = $database->prepare($sqlInsert);
 
+
    $title = "Marco Polo";
    $imageUrl = "marcopolo.jpeg";
    $runtime = 10800;
@@ -32,6 +33,7 @@
    $releaseDate = "1997-10-12";
 
    $request->execute([$title, $imageUrl, $runtime, $description, $releaseDate]);
+   
 
    //$database->query($sqlInsert);
 
