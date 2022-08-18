@@ -21,9 +21,19 @@
 
    //insertion dans la base de donnée
    $sqlInsert = "INSERT INTO `movies` ( `title`, `image_url`, `runtime`, `description`, `release_date`) VALUES
-    ( 'La Mouche', 'mouche.jpg', '6500', 'Mouche à miel', '2022-07-09');";
+    ( ?, ?, ?, ?, ?);";
 
-   $database->query($sqlInsert);
+   $request = $database->prepare($sqlInsert);
+
+   $title = "Marco Polo";
+   $imageUrl = "marcopolo.jpeg";
+   $runtime = 10800;
+   $description = "Marco rejoint Polo";
+   $releaseDate = "1997-10-12";
+
+   $request->execute([$title, $imageUrl, $runtime, $description, $releaseDate]);
+
+   //$database->query($sqlInsert);
 
     function connect($host, $dbname, $login, $password){
         return new PDO("mysql:host=".$host.";dbname=".$dbname, $login, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
