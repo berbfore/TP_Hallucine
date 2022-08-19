@@ -13,7 +13,7 @@ for($i=0; $i < count($movies);$i++) :
     <br>
     <?= $movies[$i]->getTitle(); ?>
     <br>
-    <?= $movies[$i]->getRelaseDate()->format("Y"); ?>
+    <?= $movies[$i]->getReleaseDate()->format("Y"); ?>
 </div>
 
 <?php endfor; ?>

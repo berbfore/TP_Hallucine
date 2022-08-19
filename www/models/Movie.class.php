@@ -10,13 +10,14 @@ class Movie{
     private DateTime $_releaseDate;
     
 
-    public function _construct($id, $title, $imageUrl, $runtime, $description, $releaseDate){
+    public function __construct($id, $title, $imageUrl, $runtime, $description, $releaseDate){
         $this->_id = $id;
         $this->_title = $title;
         $this->_imageUrl = $imageUrl;
         $this->_runtime = $runtime;
         $this->_description = $description;
         $this->_releaseDate = new DateTime($releaseDate);
+        
         
     }
 
