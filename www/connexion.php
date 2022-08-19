@@ -21,7 +21,7 @@
 
    //insertion dans la base de donnée
    $sqlInsert = "INSERT INTO `movies` ( `title`, `image_url`, `runtime`, `description`, `release_date`) VALUES
-    ( ?, ?, ?, ?, ?);";
+    ( ?, ?, ?, ?, ?)";
 
    $request = $database->prepare($sqlInsert);
 
